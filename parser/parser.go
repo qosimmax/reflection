@@ -76,11 +76,10 @@ func GetArguments(i interface{}) error {
 		}
 
 		field := val.Field(i)
-		/*
-			if debug {
-				fmt.Println("field: ", field.Type())
-				fmt.Printf("arg: %#v \n", arg)
-			}*/
+		/*	if debug {
+			fmt.Println("field: ", field.Type())
+			fmt.Printf("arg: %#v \n", arg)
+		}*/
 
 		arg.Elem = field
 
@@ -224,7 +223,6 @@ func ParseArgs(args []Argument) error {
 			}
 
 		case time.Duration:
-
 			val := arg.Val.(*string)
 
 			//if string field is required return error
